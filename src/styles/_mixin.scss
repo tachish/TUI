@@ -1,0 +1,77 @@
+// Button mixin
+@mixin button-size(
+    $padding-x, 
+    $padding-y, 
+    $font-size, 
+    $border-radius
+) {
+    padding: $padding-y, $padding-x;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+
+@mixin button-style(
+    $background,
+    $border,
+    $color,
+    $hover-background: lighten($background, 7.5%),
+    $hover-border: lighten($border, 10%),
+    $hover-color: $color
+) {
+    color: $color;
+    background: $background;
+    border-color: $border;
+    &:hover{
+        color: $hover-color;
+        background: $hover-background;
+        border-color: $hover-border;
+    }
+
+    &:focus,
+    &.focus {
+        color: $hover-color;
+        background: $hover-background;
+        border-color: $hover-border;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $color;
+        background: $background;
+        border-color: $border;
+        user-select: none;
+    }
+}
+
+// Alert mixin
+@mixin alert-style(
+    $background,
+    $color,
+) {
+    color: $color;
+    background-color: rgba($background, .75);
+
+    max-width: $alert-maxwidth;
+    border: 1px solid $background;
+    border-radius: $alert-radius;
+    padding: $alert-padding-y $alert-padding-x $alert-padding-y $alert-padding-y;
+
+    line-height: $alert-line-height;
+    display: inline-block;
+    position: relative;
+    & .closeIcon {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        color: $gray-300;
+
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    & .closeIcon:hover {
+        cursor: pointer;
+    }
+}

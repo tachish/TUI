@@ -1,0 +1,15 @@
+.alert-success {
+    @include alert-style($success, $white);
+}
+
+.alert-info {
+    @include alert-style($info, $white);
+}
+
+.alert-warning {
+    @include alert-style($warning, $white);
+}
+
+.alert-error {
+    @include alert-style($danger, $white);
+}
