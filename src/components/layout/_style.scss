@@ -1,0 +1,46 @@
+.Container {
+    border: 1px solid #000;
+    padding: .25rem 1.25rem;
+    &.has-lside {
+        display: grid;
+        grid-template-areas: 
+            "lside content rside";
+        grid-area: "content";
+    }
+
+    &.has-rside {
+        display: grid;
+        grid-template-areas: 
+            "lside content rside";
+        grid-area: "content";
+    }
+}
+
+
+.Aside {
+    border: 1px solid #000;
+    padding: .25rem 1.25rem;
+}
+
+.left-side {
+    grid-area: "lside";
+}
+
+.right-side {
+    grid-area: "rside";
+}
+
+.Header {
+    border: 1px solid #000;
+    padding: .25rem 1.25rem;
+}
+
+.Main {
+    border: 1px solid #000;
+    padding: .25rem 1.25rem;
+}
+
+.Footer {
+    border: 1px solid #000;
+    padding: .25rem 1.25rem;
+}

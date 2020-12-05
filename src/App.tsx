@@ -7,6 +7,7 @@ import Alert, { AlertProps } from "./components/alert/alert";
 import Menu from './components/menu/menu';
 import MenuItem from './components/menu/menuItem';
 import SubMenu from './components/menu/submenu';
+import { Container, Aside, Header, Main, Footer } from './components/layout/layout';
 
 const App: React.FC = () => {
   return (
@@ -18,23 +19,23 @@ const App: React.FC = () => {
         This is Button
       </Button>
 
-      <br/>
-      
-      <Alert
+      <br />
+
+      {/* <Alert
         closable={true}
         type={"info"}
       >
         Success Text
-      </Alert>
+      </Alert> */}
 
-      <br/>
+      <br />
 
-      <Menu 
-        defaultIndex = {"0"} 
+      <Menu
+        defaultIndex={"0"}
         mode={"vertical"}
-        onSelect = {(index) => {
+        onSelect={(index) => {
           console.log(index)
-      }}>
+        }}>
         <MenuItem>
           this is 0
         </MenuItem>
@@ -65,8 +66,27 @@ const App: React.FC = () => {
         </SubMenu>
       </Menu>
 
-      <br/>
+      <br />
 
+      <Container prefixCls="Container">
+        <Header prefixCls="Header">
+          Header
+        </Header>
+        <Container prefixCls="Container">
+          <Aside prefixCls="Aside" sideOption={2}>
+            Left side
+          </Aside>
+          <Main prefixCls="Main">
+            Main
+          </Main>
+          <Aside prefixCls="Aside" sideOption={1}>
+            Right Side
+          </Aside>
+        </Container>
+        <Footer prefixCls="Footer">
+          Footer
+          </Footer>
+      </Container>
 
     </div>
   )
