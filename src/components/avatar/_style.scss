@@ -1,0 +1,20 @@
+.avatar-square {
+    @include avatar-shape($avatar-square, $avatar-normal-diameter);
+}
+
+.avatar-circle {
+    @include avatar-shape($avatar-circle, $avatar-normal-diameter);
+}
+
+.avatar-normal {
+    @include avatar-size($avatar-normal-diameter, $avatar-font-size-base);
+}
+
+.avatar-sm {
+    @include avatar-size($avatar-small-diameter, $avatar-font-size-base/2);
+}
+
+.avatar-lg {
+    @include avatar-size($avatar-large-diameter, $avatar-font-size-base * 2);
+}
+

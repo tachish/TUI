@@ -2,31 +2,36 @@ import React from 'react';
 import "./styles/index.scss";
 
 import Button, { ButtonType, ButtonSize } from "./components/button/button";
-import Alert, { AlertProps } from "./components/alert/alert";
+import Alert from "./components/alert/alert";
 
 import Menu from './components/menu/menu';
 import MenuItem from './components/menu/menuItem';
 import SubMenu from './components/menu/submenu';
-import { Container, Aside, Header, Main, Footer } from './components/layout/layout';
+import Input, { DefaultInput, ControlledInput } from "./components/input/input";
 
+import { Container, Aside, Header, Main, Footer } from './components/layout/layout';
+import Avator from './components/avatar/avatar';
+
+import imgURL from "./static/img.jpg";
 const App: React.FC = () => {
   return (
     <div className="App">
 
       <Button
         btnType={ButtonType.Danger}
+        size={ButtonSize.Large}
       >
         This is Button
       </Button>
 
       <br />
 
-      {/* <Alert
+      <Alert
         closable={true}
         type={"info"}
       >
         Success Text
-      </Alert> */}
+      </Alert>
 
       <br />
 
@@ -88,6 +93,32 @@ const App: React.FC = () => {
           </Footer>
       </Container>
 
+      <br/>
+      <Input style={{width: "300px"}} prepend="https://" append=".com">
+      </Input>
+
+      <DefaultInput></DefaultInput>
+      <ControlledInput style={{width: "300px"}}></ControlledInput>
+    
+      <Avator
+        src={imgURL}
+        size={"lg"}
+        shape={'circle'}
+      >
+      </Avator>
+      
+      <Avator
+        src={imgURL}
+        size={"default"}
+        shape={'circle'}
+      >
+      </Avator>
+
+      <Avator
+        size={"sm"}
+        shape={'square'}
+      >
+      </Avator>
     </div>
   )
 }

@@ -8,14 +8,19 @@
 @import "mixin";
 
 // button styles
-@import "../components/button/button";
+@import "../components/button/style";
 
 // alert styles
-@import "../components/alert/alert";
+@import "../components/alert/style";
 
 // menu styles
 @import "../components/menu/style";
 
 // layout styles
-
 @import "../components/layout/style";
+
+// input styles
+@import "../components/input/style";
+
+// avatar styles
+@import "../components/avatar/style";
