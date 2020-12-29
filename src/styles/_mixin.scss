@@ -104,3 +104,42 @@
         }
     }
 }
+
+@mixin step-line-color($color) {
+    width: auto;
+    position: relative;
+    border-radius: 5px;
+    
+    flex-grow: 1;
+    justify-self: center;
+    &::after {
+        content: " ";
+        width: 200%;
+        position: absolute;
+        border: 1px solid $color;
+        top: 0;
+        left: 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+
+
+@mixin step($color) {
+    padding: $step-padding-y $step-padding-x;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+    & .step-title {
+        color: $color;
+        font-size: 20px;
+    }
+
+}

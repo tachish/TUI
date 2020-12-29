@@ -1,0 +1,50 @@
+.steps {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+
+
+.step-icon {
+
+}
+
+.step-content {
+    & .step-title {
+        font-size: $font-size-base;
+    }
+    & .step-description {
+        color: $gray-400;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+    }
+}
+
+.step-wait {
+    @include step($gray-400);
+    & > .step-line-wait {
+        @include step-line-color($gray-400);
+    }
+}
+
+.step-process {
+    @include step($cyan);
+    & > .step-line-process {
+        @include step-line-color($cyan);
+    }
+}
+
+.step-success {
+    @include step($green);
+    & > .step-line-success {
+        @include step-line-color($green);
+    }
+}
+
+.step-failed {
+    @include step($red);
+    & > .step-line-failed {
+        @include step-line-color($red);
+    }
+}

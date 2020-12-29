@@ -14,6 +14,10 @@ import Avator from './components/avatar/avatar';
 
 import Badge from './components/badge/badge';
 import imgURL from "./static/img.jpg";
+
+import Steps from './components/steps/steps';
+import Step from './components/steps/step';
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -150,6 +154,49 @@ const App: React.FC = () => {
         >
         </Avator>
       </Badge>
+
+      <br/>
+      <br/>
+
+      <Steps>
+        <Step
+          title={"Title1"}
+          description={"Description1"}
+        >
+        </Step>
+        <Step
+          title={"Title 2"}
+          description={"Description 2"}
+        >
+        </Step>
+        <Step
+          title={"Title 3"}
+          description={"Description 3"}
+        >
+        </Step>
+      </Steps>
+
+        <br/>
+
+      <Steps
+        change={true}
+      >
+        <Step
+          title={"Title1"}
+          description={"Description1"}
+        >
+        </Step>
+        <Step
+          title={"Title 2"}
+          description={"Description 2"}
+        >
+        </Step>
+        <Step
+          title={"Title 3"}
+          description={"Description 3"}
+        >
+        </Step>
+      </Steps>
     </div>
   )
 }
