@@ -17,6 +17,7 @@ import imgURL from "./static/img.jpg";
 
 import Steps from './components/steps/steps';
 import Step from './components/steps/step';
+import Switch from './components/switch/switch';
 
 const App: React.FC = () => {
   return (
@@ -79,23 +80,23 @@ const App: React.FC = () => {
       <br />
 
       <Container prefixCls="Container">
-        <Header prefixCls="Header">
-          Header
-        </Header>
+        <Aside prefixCls="Aside" sideOption={2}>
+          Left side
+        </Aside>
         <Container prefixCls="Container">
-          <Aside prefixCls="Aside" sideOption={2}>
-            Left side
-          </Aside>
+          <Header prefixCls="Header">
+            Header
+          </Header>
           <Main prefixCls="Main">
             Main
           </Main>
-          <Aside prefixCls="Aside" sideOption={1}>
-            Right Side
-          </Aside>
+          <Footer prefixCls="Footer">
+            Footer
+            </Footer>
         </Container>
-        <Footer prefixCls="Footer">
-          Footer
-          </Footer>
+        <Aside prefixCls="Aside" sideOption={1}>
+          Right Side
+        </Aside>
       </Container>
 
       <br/>
@@ -105,6 +106,14 @@ const App: React.FC = () => {
       <DefaultInput></DefaultInput>
       <ControlledInput style={{width: "300px"}}></ControlledInput>
     
+        <br/>
+        <Avator
+          src={imgURL}
+          size={"lg"}
+          shape={'circle'}
+        >
+        </Avator>
+        <br/>
       <Badge
         content={"Logout"}
       >
@@ -127,6 +136,7 @@ const App: React.FC = () => {
         <Avator
           size={"sm"}
           shape={'square'}
+          char={"wsh"}
         >
         </Avator>
       </Badge>
@@ -197,6 +207,15 @@ const App: React.FC = () => {
         >
         </Step>
       </Steps>
+
+      <br/>
+      <br/>
+
+      <Switch
+        checked={true}
+      >
+
+      </Switch>
     </div>
   )
 }
