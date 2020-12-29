@@ -46,7 +46,6 @@ const Layout: React.FC<BasicLayoutProps> = (props) => {
 
     return (
         <div className={classes}>
-
             {children}
         </div>
     )

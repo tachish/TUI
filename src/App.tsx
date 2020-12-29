@@ -12,6 +12,7 @@ import Input, { DefaultInput, ControlledInput } from "./components/input/input";
 import { Container, Aside, Header, Main, Footer } from './components/layout/layout';
 import Avator from './components/avatar/avatar';
 
+import Badge from './components/badge/badge';
 import imgURL from "./static/img.jpg";
 const App: React.FC = () => {
   return (
@@ -100,25 +101,55 @@ const App: React.FC = () => {
       <DefaultInput></DefaultInput>
       <ControlledInput style={{width: "300px"}}></ControlledInput>
     
-      <Avator
-        src={imgURL}
-        size={"lg"}
-        shape={'circle'}
+      <Badge
+        content={"Logout"}
       >
-      </Avator>
-      
-      <Avator
-        src={imgURL}
-        size={"default"}
-        shape={'circle'}
-      >
-      </Avator>
+        <Avator
+          src={imgURL}
+          size={"lg"}
+          shape={'circle'}
+        >
+        </Avator>
+      </Badge>
 
-      <Avator
-        size={"sm"}
-        shape={'square'}
+      <br/>
+      <br/>
+
+      <Badge
+        counter={10}
+        offsetX={10}
+        offsetY={-10}
       >
-      </Avator>
+        <Avator
+          size={"sm"}
+          shape={'square'}
+        >
+        </Avator>
+      </Badge>
+      
+      <br/> <br/>
+
+      <Badge
+        counter={10}
+        overflowNum={6}
+      >
+        <Avator
+          src={imgURL}
+          size={"default"}
+          shape={'circle'}
+        >
+        </Avator>
+      </Badge>
+
+      <Badge
+      >
+        <Avator
+          src={imgURL}
+          size={"default"}
+          shape={'circle'}
+        >
+        </Avator>
+      </Badge>
     </div>
   )
 }

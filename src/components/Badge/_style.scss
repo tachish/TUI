@@ -1,0 +1,28 @@
+.badge {
+    position: relative;
+    display: inline-block;
+    padding-top: -10px;
+}
+
+.badge-dot {
+    height: $badge-height;
+    width: auto;
+    padding: 0 $badge-padding 0 $badge-padding;
+    border: $border-width solid #000;
+    border-radius: 14px;
+    display: inline-block;
+
+    background-color: $green;
+    
+    line-height: $badge-line-height;
+    font-size: $badge-font-size;
+    color: $white;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    
+    overflow: hidden;
+    text-overflow:ellipsis;
+}

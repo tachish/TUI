@@ -24,6 +24,9 @@ $green:   #52c41a !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+// 
+$mudanpink: #eea2a4 !default;
+
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -317,3 +320,9 @@ $avatar-font-size-base:                  $font-size-base * 2;
 $avatar-small-diameter:                  2rem !default;
 $avatar-normal-diameter:                 4rem !default;
 $avatar-large-diameter:                  6rem !default;
+
+// Badge
+$badge-height:                           1.25rem !default;
+$badge-line-height:                      $line-height-base;
+$badge-padding:                          .25rem !default;
+$badge-font-size:                        .5rem !default;
