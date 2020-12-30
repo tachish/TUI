@@ -18,6 +18,7 @@ import imgURL from "./static/img.jpg";
 import Steps from './components/steps/steps';
 import Step from './components/steps/step';
 import Switch from './components/switch/switch';
+import Divider from './components/divider/divider';
 
 const App: React.FC = () => {
   return (
@@ -207,14 +208,18 @@ const App: React.FC = () => {
         >
         </Step>
       </Steps>
-
       <br/>
+      
+      <Divider
+        text={"Text"}
+      >
+      </Divider>
+
       <br/>
 
       <Switch
         checked={true}
       >
-
       </Switch>
     </div>
   )

@@ -56,7 +56,6 @@ const BaseSwitch: React.FC<BaseSwitchProps> = (props) => {
     )
 }
 
-// HOC
 const HOC = (BaseSwitch: React.FC<BaseSwitchProps>) => {
     const SwitchHOC: React.FC<SwitchProps> = (props) => {
         const {

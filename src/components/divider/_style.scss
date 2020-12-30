@@ -1,0 +1,62 @@
+.divider-text {
+    display: flex;
+    align-items: center;
+}
+
+.divider-text-left {
+    // 左横线
+    & > :first-child {
+        flex-grow: 1;
+    } 
+    // 右边横线
+    & > :last-child {
+        flex-grow: 2.5;
+    }
+}
+
+.divider-text-middle {
+    // 左横线
+    & > :first-child {
+        flex-grow: 1;
+    } 
+    // 右边横线
+    & > :last-child {
+        flex-grow: 1;
+    }
+}
+
+.divider-text-right {
+    // 左横线
+    & > :first-child {
+        flex-grow: 2.5;
+    } 
+    // 右边横线
+    & > :last-child {
+        flex-grow: 1;
+    }
+}
+
+.divider-line {
+    width: auto;
+    position: relative;
+    border-radius: 5px;
+    
+    &::after {
+        content: " ";
+        width: 200%;
+        position: absolute;
+        border: 1px solid $gray-300;
+        top: 0;
+        left: 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+
+.divider-text {
+    // align-self: center;
+}
