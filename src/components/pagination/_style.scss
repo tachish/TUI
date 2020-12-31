@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.pagination-content {
+    display: flex;
+}
+
+.pagination-current-node {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pagination-node {
+    border: 1px solid $gray-300;
+    padding: 2.5px 10px;
+    margin: 4px;
+
+    &:visited,
+    &:link,
+    &:active {
+        text-decoration: none;
+    }
+    &:hover {
+        border: 1px solid $blue;
+    }
+}

@@ -19,6 +19,7 @@ import Steps from './components/steps/steps';
 import Step from './components/steps/step';
 import Switch from './components/switch/switch';
 import Divider from './components/divider/divider';
+import Pagination from './components/pagination/pagination';
 
 const App: React.FC = () => {
   return (
@@ -221,6 +222,15 @@ const App: React.FC = () => {
         checked={true}
       >
       </Switch>
+
+      <br/>
+
+      <Pagination
+        defaultCurrent={5}
+        totalPages={100}
+        showTotal={false}
+      >
+      </Pagination>
     </div>
   )
 }
