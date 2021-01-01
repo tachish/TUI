@@ -1,10 +1,5 @@
-import React, { Children } from 'react';
-import classNames from 'classnames';
+import React from 'react';
 
-// React.FC
-// color
-// overflowNum
-// offset
 export interface BadgeProps {
     counter?: number;
     content?: string;

@@ -23,7 +23,7 @@ const Pagination: React.FC<BasePaginationProps> = (props) => {
         // TODO
         showTotal,
         gap,
-        showJumper,
+        //showJumper,
     } = props
 
     const [currentPage, setcurrentPage] = useState(current ? current : defaultCurrent)
