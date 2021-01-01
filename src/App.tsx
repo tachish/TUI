@@ -20,6 +20,7 @@ import Step from './components/steps/step';
 import Switch from './components/switch/switch';
 import Divider from './components/divider/divider';
 import Pagination from './components/pagination/pagination';
+import Slider from './components/slider/slider';
 
 const App: React.FC = () => {
   return (
@@ -231,6 +232,22 @@ const App: React.FC = () => {
         showTotal={false}
       >
       </Pagination>
+
+      <br/>
+      
+      <Slider>
+      </Slider>
+      <br/>
+
+      
+      <Slider
+        lowerNum={200}
+        upperNum={800}
+        onChange={(v)=>{
+          console.log(v)
+        }}
+      >
+      </Slider>
     </div>
   )
 }
