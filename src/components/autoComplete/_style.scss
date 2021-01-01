@@ -1,0 +1,24 @@
+.autoComplete-selections {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.autoComplete-selection {
+    border-bottom: $border-width solid $gray-300;
+    border-left: $border-width solid $gray-300;
+    border-right: $border-width solid $gray-300;
+    margin-top: 4px;
+    padding: 10px 20px;
+    border-radius: $input-border-radius;
+
+    width: 300px;
+    
+    &:hover {
+        color: $white;
+        background-color: $primary;
+        border-bottom: $border-width solid $input-focus-shadow-color;
+        border-left: $border-width solid $input-focus-shadow-color;
+        border-right: $border-width solid $input-focus-shadow-color;
+    }
+}

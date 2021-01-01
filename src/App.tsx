@@ -21,7 +21,15 @@ import Switch from './components/switch/switch';
 import Divider from './components/divider/divider';
 import Pagination from './components/pagination/pagination';
 import Slider from './components/slider/slider';
+import AutoComplete from './components/autoComplete/autoComplete';
 
+const renderOption = (q: string) => {
+  return (
+    <h6
+      style={{ margin: "0px" }}>
+      {q}</h6>
+  )
+}
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -102,21 +110,21 @@ const App: React.FC = () => {
         </Aside>
       </Container>
 
-      <br/>
-      <Input style={{width: "300px"}} prepend="https://" append=".com">
+      <br />
+      <Input style={{ width: "300px" }} prepend="https://" append=".com">
       </Input>
 
       <DefaultInput></DefaultInput>
-      <ControlledInput style={{width: "300px"}}></ControlledInput>
-    
-        <br/>
-        <Avator
-          src={imgURL}
-          size={"lg"}
-          shape={'circle'}
-        >
-        </Avator>
-        <br/>
+      <ControlledInput style={{ width: "300px" }}></ControlledInput>
+
+      <br />
+      <Avator
+        src={imgURL}
+        size={"lg"}
+        shape={'circle'}
+      >
+      </Avator>
+      <br />
       <Badge
         content={"Logout"}
       >
@@ -128,8 +136,8 @@ const App: React.FC = () => {
         </Avator>
       </Badge>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Badge
         counter={10}
@@ -143,8 +151,8 @@ const App: React.FC = () => {
         >
         </Avator>
       </Badge>
-      
-      <br/> <br/>
+
+      <br /> <br />
 
       <Badge
         counter={10}
@@ -168,8 +176,8 @@ const App: React.FC = () => {
         </Avator>
       </Badge>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Steps>
         <Step
@@ -189,7 +197,7 @@ const App: React.FC = () => {
         </Step>
       </Steps>
 
-        <br/>
+      <br />
 
       <Steps
         change={true}
@@ -210,21 +218,21 @@ const App: React.FC = () => {
         >
         </Step>
       </Steps>
-      <br/>
-      
+      <br />
+
       <Divider
         text={"Text"}
       >
       </Divider>
 
-      <br/>
+      <br />
 
       <Switch
         checked={true}
       >
       </Switch>
 
-      <br/>
+      <br />
 
       <Pagination
         defaultCurrent={5}
@@ -233,22 +241,38 @@ const App: React.FC = () => {
       >
       </Pagination>
 
-      <br/>
-      
+      <br />
+
       <Slider>
       </Slider>
-      <br/>
+      <br />
 
-      
+
       <Slider
         lowerNum={200}
         upperNum={800}
-        onChange={(v)=>{
+        onChange={(v) => {
           console.log(v)
         }}
       >
       </Slider>
-    </div>
+
+      <AutoComplete
+        style={{ width: "300px" }}
+        fetchSuggestions={(query: string) => {
+          const names = ['Aroan', 'Alex', 'Aba', 'Kinopio', 'Tachish']
+          return names.filter(name => name.includes(query))
+        }}
+        onSelect={(q: string) => {
+          console.log(q)
+        }}
+        renderOption={renderOption}
+      >
+
+      </AutoComplete>
+
+      <br />
+    </div >
   )
 }
 

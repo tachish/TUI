@@ -1,6 +1,4 @@
-import React, { useState, useRef } from 'react'
-import classnames from 'classnames';
-
+import React, { useState } from 'react'
 interface SliderProps {
     lowerNum?: number
     upperNum?: number
