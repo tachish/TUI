@@ -23,6 +23,9 @@ import Pagination from './components/pagination/pagination';
 import Slider from './components/slider/slider';
 import AutoComplete from './components/autoComplete/autoComplete';
 
+import Icon from './components/icon/icon';
+
+
 const renderOption = (q: string) => {
   return (
     <h6
@@ -34,7 +37,7 @@ const renderOption = (q: string) => {
 const App: React.FC = () => {
   return (
     <div className="App">
-
+      <Icon icon={"coffee"} theme="primary"></Icon>
       <Button
         btnType={ButtonType.Danger}
         size={ButtonSize.Large}
@@ -248,11 +251,11 @@ const App: React.FC = () => {
       </Slider>
       <br />
 
-        <div></div>
+      <div></div>
       <Slider
         lowerNum={200}
         upperNum={800}
-        onChange={(v) => {
+        onChange={(v: any) => {
           console.log(v)
         }}
       >
@@ -271,8 +274,9 @@ const App: React.FC = () => {
       >
 
       </AutoComplete>
-
       <br />
+
+      
     </div >
   )
 }
