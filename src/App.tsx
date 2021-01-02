@@ -24,6 +24,7 @@ import Slider from './components/slider/slider';
 import AutoComplete from './components/autoComplete/autoComplete';
 
 import Icon from './components/icon/icon';
+import Progress from './components/progress/progress';
 
 
 const renderOption = (q: string) => {
@@ -276,7 +277,9 @@ const App: React.FC = () => {
       </AutoComplete>
       <br />
 
-      
+      <Progress
+        percent={10}>
+      </Progress>
     </div >
   )
 }
