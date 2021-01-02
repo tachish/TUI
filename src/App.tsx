@@ -27,7 +27,8 @@ const renderOption = (q: string) => {
   return (
     <h6
       style={{ margin: "0px" }}>
-      {q}</h6>
+      {q}
+    </h6>
   )
 }
 const App: React.FC = () => {
@@ -55,7 +56,7 @@ const App: React.FC = () => {
       <Menu
         defaultIndex={"0"}
         mode={"vertical"}
-        onSelect={(index) => {
+        onSelect={(index: number) => {
           console.log(index)
         }}>
         <MenuItem>
@@ -247,7 +248,7 @@ const App: React.FC = () => {
       </Slider>
       <br />
 
-
+        <div></div>
       <Slider
         lowerNum={200}
         upperNum={800}
