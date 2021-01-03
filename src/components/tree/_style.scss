@@ -1,0 +1,19 @@
+.treeNode-title {
+    height: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.treeNode-icon {
+    width: 10px;
+    height: 10px;
+    flex: 0;
+}
+
+@for $treeNode-layer from 1 to 20 {
+    .treeNode-#{$treeNode-layer} {
+        margin-left: 20px;
+    }
+}

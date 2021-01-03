@@ -26,6 +26,7 @@ import AutoComplete from './components/autoComplete/autoComplete';
 import Icon from './components/icon/icon';
 import Progress from './components/progress/progress';
 
+import Tree from "./components/tree/tree"
 
 const renderOption = (q: string) => {
   return (
@@ -35,10 +36,52 @@ const renderOption = (q: string) => {
     </h6>
   )
 }
+
+const treeData = [{
+  id: '1',
+  label: '1',
+  children: [{
+    id: '1-1',
+    label: '1-1',
+    foldOption: true,
+    children: [{
+      id: '1-1-1',
+      label: '1-1-1'
+    }, {
+      id: '1-1-2',
+      label: '1-1-2'
+    }, {
+      id: '1-1-3',
+      label: '1-1-3'
+    }]
+  }]
+}, {
+  id: '2',
+  label: '2',
+  children: [{
+    id: '2-1',
+    label: '2-1',
+    children: [{
+      id: '2-1-1',
+      label: '2-1-1'
+    }]
+  }, {
+    id: '2-2',
+    label: '2-2',
+    children: [{
+      id: '2-2-1',
+      label: '2-2-1'
+    }]
+  }]
+}]
+
 const App: React.FC = () => {
   return (
     <div className="App">
       <Icon icon={"coffee"} theme="primary"></Icon>
+
+      <br />
+
       <Button
         btnType={ButtonType.Danger}
         size={ButtonSize.Large}
@@ -280,6 +323,12 @@ const App: React.FC = () => {
       <Progress
         percent={10}>
       </Progress>
+
+      <Tree
+        data={treeData}
+      >
+
+      </Tree>
     </div >
   )
 }
